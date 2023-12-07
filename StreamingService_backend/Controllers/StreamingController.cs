@@ -7,7 +7,7 @@ namespace SS.Controller{
     [ApiController]
     public class StreamingController:ControllerBase{
 
-        [HttpGet]
+        [HttpGet("test")]
         public IActionResult Get(){
             var response = new {
                 Version = HttpContext.GetRequestedApiVersion().ToString(),
@@ -15,16 +15,13 @@ namespace SS.Controller{
             };
             return Ok(response);
         }
-
-
-
     }
 
     [ApiVersion("2.0")]
     [Route("api/[controller]")]
     [ApiController]
     public class Streaming2Controller:ControllerBase{
-        [HttpGet]
+        [HttpGet("test")]
         public IActionResult Get(){
             var response = new {
                 Version = HttpContext.GetRequestedApiVersion().ToString(),

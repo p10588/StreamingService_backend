@@ -1,25 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.002.0
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamingService_backend", "StreamingService_backend.csproj", "{77240F64-48CF-485B-831B-F863FDBD71F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingService_backend", "StreamingService_backend\StreamingService_backend.csproj", "{1F9AB86E-A740-42B8-A90D-6789BB2CC557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingService_backend.Test", "StreamingService_backend.Test\StreamingService_backend.Test.csproj", "{55ECDA3B-34CF-4114-80D9-B19CE7DAD660}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{77240F64-48CF-485B-831B-F863FDBD71F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77240F64-48CF-485B-831B-F863FDBD71F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77240F64-48CF-485B-831B-F863FDBD71F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77240F64-48CF-485B-831B-F863FDBD71F8}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {ED9D94D7-2DA6-4FEA-A3EC-2949FE486D45}
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F9AB86E-A740-42B8-A90D-6789BB2CC557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9AB86E-A740-42B8-A90D-6789BB2CC557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9AB86E-A740-42B8-A90D-6789BB2CC557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9AB86E-A740-42B8-A90D-6789BB2CC557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55ECDA3B-34CF-4114-80D9-B19CE7DAD660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55ECDA3B-34CF-4114-80D9-B19CE7DAD660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55ECDA3B-34CF-4114-80D9-B19CE7DAD660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55ECDA3B-34CF-4114-80D9-B19CE7DAD660}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
