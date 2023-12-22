@@ -76,3 +76,4 @@ bin/
 
 
 .fake
+StreamingService_backend/appsettings.json

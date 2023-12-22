@@ -2,29 +2,45 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SS.Service;
 
 namespace SS.Core{
     public class Startup{
 
-        public IConfiguration configuration { get; }
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration){
-            this.configuration = configuration;
+            this.Configuration = configuration;
             Console.WriteLine("Hello World");
         }
 
         public void ConfigureServices(IServiceCollection services){
+            Console.WriteLine("Start Config Service");
 
+            ConfigApiVersion(services);
+            ConfigDBContext(services);
+
+            services.AddScoped<IStreamingRepo, StreamingRepo>();
+            services.AddScoped<StreamingService, StreamingService>();
+
+            services.AddControllers();
+            
+        }
+
+        private void ConfigApiVersion(IServiceCollection services){
             services.AddApiVersioning(option =>{
                 option.DefaultApiVersion = new ApiVersion(1, 0);
                 option.AssumeDefaultVersionWhenUnspecified = true;
                 option.ReportApiVersions = true;
-
             });
+        }
 
-            services.AddControllers();
+        private void ConfigDBContext(IServiceCollection services){
+            services.AddDbContext<Infrastructure.StreamingDbContext_pgsql>(option => 
+                option.UseNpgsql(this.Configuration.GetConnectionString("pgsql")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env ){
