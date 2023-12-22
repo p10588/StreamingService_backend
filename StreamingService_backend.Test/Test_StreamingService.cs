@@ -1,5 +1,4 @@
 using SS.Service;
-using NSubstitute;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using SS.Model;
 using Npgsql.Replication;
@@ -10,11 +9,9 @@ namespace SS.Test{
         
         IStreamingRepo _fakeRepo;
         StreamingService _service;
-        
 
         [SetUp]
         public void Setup(){
-            this._fakeRepo = Substitute.For<IStreamingRepo>();
             this._service = new StreamingService(this._fakeRepo);
         }
 
